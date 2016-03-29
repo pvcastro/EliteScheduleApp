@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'services/eliteApi'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').controller('locationsCtrl', ['eliteApi', locationsCtrl]);
+	app.controller('locationsCtrl', ['eliteApi', locationsCtrl]);
 	
 	function locationsCtrl(eliteApi) {	
 		var vm = this;
@@ -11,4 +12,4 @@
 		});		
 	};
 	
-})();
+});

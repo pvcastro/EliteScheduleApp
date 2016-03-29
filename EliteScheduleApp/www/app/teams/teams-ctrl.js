@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'services/eliteApi'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').controller('teamsCtrl', ['$scope','eliteApi', teamsCtrl]);
+	app.controller('teamsCtrl', ['$scope','eliteApi', teamsCtrl]);
 	
 	function teamsCtrl($scope,eliteApi) {	
 		var vm = this;		
@@ -17,4 +18,4 @@
 		vm.loadList(false);		
 	};
 	
-})();
+});

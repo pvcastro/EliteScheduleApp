@@ -4,7 +4,7 @@
 			<div ng-repeat="division in vm.standings">
 				<div class="item item-divider item-energized">{{division.divisionName}}</div>
 				<ion-item class="item-icon-right" ng-repeat="team in division.divisionStandings" 
-					href="#/app/teams/{{team.id}}">
+					href="#/app/teams/{{team.teamId}}">
 					
 					<div class="row">
 						<div class="col">

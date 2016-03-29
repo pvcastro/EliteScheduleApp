@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'angular-cache'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').factory('eliteApi', ['$http', '$q', '$ionicLoading', 'CacheFactory', eliteApi]);
+	app.service('eliteApi', ['$http', '$q', '$ionicLoading', 'CacheFactory', eliteApi]);
 	
 	function eliteApi($http, $q, $ionicLoading, CacheFactory) {
 		
@@ -116,4 +117,4 @@
 		}
 	};
 	
-})();
+});

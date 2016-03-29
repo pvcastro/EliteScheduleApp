@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'services/eliteApi'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').controller('myTeamsCtrl', ['$state', 'myTeamsService', 'eliteApi', myTeamsCtrl]);
+	app.controller('myTeamsCtrl', ['$state', 'myTeamsService', 'eliteApi', myTeamsCtrl]);
 	
 	function myTeamsCtrl($state, myTeamsService, eliteApi) {	
 		var vm = this;	
@@ -14,4 +15,5 @@
 			$state.go('app.team-detail', { id : team.id });			
 		};
 	};
-})();
+	
+});

@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'services/eliteApi', 'services/myTeamsService'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').controller('teamDetailCtrl', ['$stateParams', '$ionicPopup', 'eliteApi', 'myTeamsService', teamDetailCtrl]);
+	app.controller('teamDetailCtrl', ['$stateParams', '$ionicPopup', 'eliteApi', 'myTeamsService', teamDetailCtrl]);
 	
 	function teamDetailCtrl($stateParams, $ionicPopup, eliteApi, myTeamsService) {	
 		var vm = this;
@@ -11,7 +12,7 @@
 			vm.teamId = Number($stateParams.id);
 				
 			var team = _.chain(data.teams)
-				.pluck('divisionTeams')
+				.map('divisionTeams')
 				.flatten()
 				.find({id: vm.teamId})
 				.value();
@@ -78,4 +79,4 @@
 		}		
 	};
 	
-})();
+});

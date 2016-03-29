@@ -1,7 +1,8 @@
-(function (){
+define(['app'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').directive('markdown', [markdown]);
+	app.directive('markdown', [markdown]);
 	
 	function markdown(Showdown) {		
 		
@@ -19,5 +20,6 @@
 				element.html(markup);
 			});
 		};
-	}	
-})();
+	};
+
+});

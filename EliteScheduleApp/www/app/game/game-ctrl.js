@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'services/eliteApi'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').controller('gameCtrl', ['$stateParams', 'eliteApi', gameCtrl]);
+	app.controller('gameCtrl', ['$stateParams', 'eliteApi', gameCtrl]);
 	
 	function gameCtrl($stateParams, eliteApi) {	
 		var vm = this;
@@ -13,4 +14,4 @@
 		});		
 	};
 	
-})();
+});

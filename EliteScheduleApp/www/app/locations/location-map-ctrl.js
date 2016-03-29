@@ -1,7 +1,8 @@
-(function (){
+define(['app', 'services/eliteApi', 'angular-google-maps'], function(app) {
+
 	'use strict';
 	
-	angular.module('eliteApp').controller('locationMapCtrl', ['$stateParams', 'eliteApi', locationMapCtrl]);
+	app.controller('locationMapCtrl', ['$stateParams', 'eliteApi', locationMapCtrl]);
 	
 	function locationMapCtrl($stateParams, eliteApi) {	
 		var vm = this;
@@ -42,4 +43,4 @@
 		}
 	};
 	
-})();
+});

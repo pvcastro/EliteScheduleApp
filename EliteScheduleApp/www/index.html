@@ -13,20 +13,30 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+
+    <!-- load requirejs config -->
+    <!-- <script src="app/main.js"></script> -->
+    <!-- load requirejs -->
+    <script data-main="app/boot" src="lib/requirejs/require.js"></script>
+    <!-- load boot-script - it loads configs, routes, runs and bootstraps the app -->
+    <!-- <script src="app/boot.js"></script> -->
+
+    <!-- ionic/angularjs js -->
+    <!-- <script src="lib/ionic/js/ionic.bundle.js"></script> -->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- <script src="cordova.js"></script>
     <script src="lib/lodash/lodash.min.js"></script>
     <script src="lib/angular-cache/dist/angular-cache.min.js"></script>
     
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
-    <script src="lib/showdown/dist/showdown.js"></script>
+    <script src="lib/showdown/dist/showdown.js"></script> -->
 
     <!-- your app's js -->
-    <script src="app/app.js"></script>
+    <!-- <script src="app/app.js"></script>
     <script src="js/controllers.js"></script>
     
     <script src="app/services/eliteApi.js"></script>
@@ -41,11 +51,11 @@
     <script src="app/locations/locations-ctrl.js"></script>
     <script src="app/locations/location-map-ctrl.js"></script>
     <script src="app/game/game-ctrl.js"></script>
-    <script src="app/rules/rules-ctrl.js"></script>    
+    <script src="app/rules/rules-ctrl.js"></script>     -->
         
   </head>
 
-  <body ng-app="eliteApp">
+  <body>
     <ion-nav-view></ion-nav-view>
   </body>
 </html>
